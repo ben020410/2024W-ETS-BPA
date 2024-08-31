@@ -55,18 +55,21 @@ R = \begin{bmatrix} r_{11} & r_{12} & r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{3
 
 ## 3차 목표: 6-DOF 로봇 팔의 변환행렬 분석
 알고리즘의 이론상 문제가 없음에도 동작 오류나 오차가 발생한 것은, 로봇 팔 내부에서 동작을 처리할 때 문제가 발생했을 것으로 추측했습니다. <br>
-실제로 프로젝트에서 다루었던 [HH020 모델](https://www.hyundai-robotics.com/product/product1_view.html?no=26)은 로봇 팔의 연결 축마다 자유도가 존재해 총 6개의 자유도(**6-DOF**)를 갖고 있습니다. <br>
+실제로 프로젝트에서 다루었던 [HH020 모델](https://www.hyundai-robotics.com/product/product1_view.html?no=26)은 로봇 팔의 연결 축마다 자유도가 존재해 총 6개의 자유도(**6-DOF**)를 가집니다. <br>
 따라서 해당 모델의 Catalog와 전용 소프트웨어([HRSpace](https://www.hyundai-robotics.com/english/customer/customer4_view.html?no=94))를 분석해 이 로봇 팔 자체의 변환행렬을 구하고자 하였습니다.
 
+- 소프트웨어와의 비교를 통해 HH020 모델의 축 각도를 알고 있을 때 툴 끝의 위치($x, y, z$)와 회전량($R_x, R_y, R_z$)을 계산하는 알고리즘을 작성했습니다.
+- Jamshed lqbal, et. al.에 따르면 6-DOF 로봇 팔의 변환행렬을 분석하면 **축 각도를 역산할 수 있습니다.** 다만 이는 프로젝트 계약 기간 상 수행하지 못했으나, 추후 BPA을 맡게될 팀에게 그 내용을 인계하였습니다.
+- 6-DOF 로봇 팔을 분석하면서 추론한 내용으로, 2차 목표에서 개발한 알고리즘의 경우 오로지 목적지까지의 회전량만을 토대로 지시를 내려 **로봇 팔의 각 축의 구동 범위를 고려하지 않아** 오류가 발생했을 것으로 추측했습니다.
 <br>
 
 ## Future Improvements
-
-
-
+- 6-DOF 변환행렬 계산 알고리즘을 통해 축 각도 역산 및 필요 동작 구현하기
+- 짐벌 락([Gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock)) 문제: 3차원 회전은 x, y, z 세 축의 회전이 종속되어 있어 한 축의 자유도를 잃게 되는 현상이 발생할 수 있습니다. 이를 해결하기 위한 사원수(quarternion) 등의 개념 고안하기
 <br>
 
 ## References
 1. F. C. Park and K. M. Lynch. (2016). *Introduction to Robotics: Mechanics, Planning, and Control*. Northwestern University.
 2. Michaela Borzechowski. (2017). *Best-Fit Subspaces and Singular Value Decomposition*. Wolfgang Mulzer.
+3. Jamshed Iqbal, et. al. (2012). *Modeling and Analyzing of a 6 DOF Robotic Arm Manipulator*. Canadian Journal on Electrical and Electronics Vol. 3, No. 6.
 <br>
