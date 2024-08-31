@@ -62,5 +62,6 @@ R = \begin{bmatrix} r_{11} & r_{12} & r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{3
 <br>
 
 ## References
-F. C. Park and K. M. Lynch. (2016). *Introduction to Robotics: Mechanics, Planning, and Control*. Northwestern University.
+1. F. C. Park and K. M. Lynch. (2016). *Introduction to Robotics: Mechanics, Planning, and Control*. Northwestern University.
+2. Michaela Borzechowski. (2017). *Best-Fit Subspaces and Singular Value Decomposition*. Wolfgang Mulzer.
 <br>
