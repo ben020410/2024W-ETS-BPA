@@ -47,7 +47,7 @@ v' = \left[ I + \sin{\theta} K + (1 - \cos{\theta}) K^2 \right] v, \quad K = \be
 R = \begin{bmatrix} r_{11} & r_{12} & r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{31} & r_{32} & r_{33} \end{bmatrix} \quad \leftrightarrow \quad \begin{align} \beta=-\arcsin(r_{31}) \\ \alpha=\arccos(r_{11}/\cos\beta) \\ \gamma=\arccos(r_{33}/\cos\beta) \end{align}
 ```
 
-- [1차 성능 평가](link)
+- [1차 성능 평가](https://github.com/ben020410/2024W-ETS-BPA/issues/2)
 - [2차 성능 평가](link)
 
 <br>
