@@ -25,7 +25,7 @@ $A$: **로봇 팔 좌표계 $\to$ 카메라 좌표계**로 변환하는 미지�
 
 위 과정을 통해 로봇 팔 좌표계에서 카메라 좌표계로의 변환행렬을 산출할 수 있으며, 그 역행렬인 $A^{-1}$을 구하면 **카메라 좌표계에서의 좌표만으로도 로봇 팔 좌표계에서의 좌표를 역산할 수 있게** 됩니다. <br>
 
-- [성능 평가 결과](https://github.com/ben020410/2024W-ETS-BPA/issues/1)
+- [성능 평가](https://github.com/ben020410/2024W-ETS-BPA/issues/1)
 - 기존 방식은 캘리브레이션 수행 시 수동 teaching 과정이 필요했지만, 개선된 방법을 사용하면 작업 숙련도가 없어도 원활한 캘리브레이션 수행이 가능합니다.
 <br>
 
@@ -46,10 +46,9 @@ v' = \left[ I + \sin{\theta} K + (1 - \cos{\theta}) K^2 \right] v, \quad K = \be
 ```math
 R = \begin{bmatrix} r_{11} & r_{12} & r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{31} & r_{32} & r_{33} \end{bmatrix} \quad \leftrightarrow \quad \begin{align} \beta=-\arcsin(r_{31}) \\ \alpha=\arccos(r_{11}/\cos\beta) \\ \gamma=\arccos(r_{33}/\cos\beta) \end{align}
 ```
-<br>
-- 1차 성능 평가: 
-- SVD 알고리즘을 이용한 법선벡터 계산 고도화: 
-- 2차 성능 평가: 
+
+- [1차 성능 평가](link)
+- [2차 성능 평가](link)
 
 <br>
 
