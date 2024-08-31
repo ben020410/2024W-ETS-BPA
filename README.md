@@ -49,9 +49,15 @@ R = \begin{bmatrix} r_{11} & r_{12} & r_{13} \\ r_{21} & r_{22} & r_{23} \\ r_{3
 
 - [1차 성능 평가](https://github.com/ben020410/2024W-ETS-BPA/issues/2)
 - [2차 성능 평가](https://github.com/ben020410/2024W-ETS-BPA/issues/3)
+- 2차 성능 평가 및 알고리즘 개선 후 정확한 법선벡터 값을 산출함을 확인했지만, 여전히 오차가 발생하여 **회전 명령 자체의 개선이 필요하거나, 잘못된 회전각을 산출했을 것**으로 추측했습니다.
+- 회전각을 산출할 때 이론값과의 경향성 자체는 일치함을 확인했습니다.
 <br>
 
-## 3차 목표:
+## 3차 목표: 6-DOF 로봇 팔의 변환행렬 분석
+알고리즘의 이론상 문제가 없음에도 동작 오류나 오차가 발생한 것은, 로봇 팔 내부에서 동작을 처리할 때 문제가 발생했을 것으로 추측했습니다. <br>
+실제로 프로젝트에서 다루었던 [HH020 모델](https://www.hyundai-robotics.com/product/product1_view.html?no=26)은 로봇 팔의 연결 축마다 자유도가 존재해 총 6개의 자유도(**6-DOF**)를 갖고 있습니다. <br>
+따라서 해당 모델의 Catalog와 전용 소프트웨어([HRSpace](https://www.hyundai-robotics.com/english/customer/customer4_view.html?no=94))를 분석해 이 로봇 팔 자체의 변환행렬을 구하고자 하였습니다.
+
 <br>
 
 ## Future Improvements
